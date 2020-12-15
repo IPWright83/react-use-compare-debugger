@@ -4,7 +4,8 @@ This React hook enables you to compare two different sets of props/state between
 
 ![image](https://user-images.githubusercontent.com/1374775/102222521-6e0c6c80-3edb-11eb-994b-2ebff367f135.png)
 
-It logs the name of the property, followed by both the `previous` and `current` values. Finally it renders a flag indicating whether the two values are referentially equal which is important to prevent un-necessary React re-renders.
+It logs the name of the property, followed by both the `previous` and `current` values.
+Finally it renders a flag indicating whether the two values are referentially equal which is important to prevent un-necessary React re-renders.
 
 ## Installation
 
@@ -32,3 +33,7 @@ const myHelloWorldComponent = (props) => {
 | component  | String        | ✔        | Should be the name of the component. This is used to group your logs together and help you know the source. |
 | value      | Object        | ✔        | This is the object from this render, that you'd like to compare against the previous render.                |
 | ignoreKeys | Array<String> |          | An array of key names, used to ignore diving into deep/complex nested objects.                              |
+
+## Thanks
+
+Thanks to LogRocket - this was inspired by their blog post https://blog.logrocket.com/how-to-get-previous-props-state-with-react-hooks/ and a need for some debugging.
