@@ -1,22 +1,22 @@
 {
-  "name": "react-usecomparedebugger",
-  "version": "1.0.0",
-  "description": "Allows comparing two state/prop trees for differences",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IPWright83/react-useCompareDebugger.git"
-  },
-  "author": "IPWright83",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IPWright83/react-useCompareDebugger/issues"
-  },
-  "homepage": "https://github.com/IPWright83/react-useCompareDebugger#readme",
-  "dependencies": {
-    "react": "^17.0.1"
-  }
+    "name": "react-use-compare-debugger",
+    "version": "1.0.1",
+    "description": "Allows comparing two state/prop trees for differences",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/IPWright83/react-useCompareDebugger.git"
+    },
+    "author": "IPWright83",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/IPWright83/react-useCompareDebugger/issues"
+    },
+    "homepage": "https://github.com/IPWright83/react-useCompareDebugger#readme",
+    "dependencies": {
+        "react": "^17.0.1"
+    }
 }
