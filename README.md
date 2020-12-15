@@ -4,6 +4,8 @@ This React hook enables you to compare two different sets of props/state between
 
 ![image](https://user-images.githubusercontent.com/1374775/102222521-6e0c6c80-3edb-11eb-994b-2ebff367f135.png)
 
+It logs the name of the property, followed by both the `previous` and `current` values. Finally it renders a flag indicating whether the two values are referentially equal which is important to prevent un-necessary React re-renders.
+
 ## Installation
 
 `npm install --save-dev react-use-compare-debugger`
