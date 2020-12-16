@@ -2,7 +2,7 @@
 
 This React hook enables you to compare two different sets of props/state between re-renders. It's designed to aid with debugging to help determine why React components are re-rendering by offering a redux style console output.
 
-![image](https://user-images.githubusercontent.com/1374775/102222521-6e0c6c80-3edb-11eb-994b-2ebff367f135.png)
+![image](https://user-images.githubusercontent.com/1374775/102356757-85b02780-3fa5-11eb-8d29-8ec03511526e.png)
 
 It logs the name of the property, followed by both the `previous` and `current` values.
 Finally it renders a flag indicating whether the two values are referentially equal which is important to prevent un-necessary React re-renders.
