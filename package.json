@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/IPWright83/react-useCompareDebugger.git"
+        "url": "git+https://github.com/IPWright83/react-use-compare-debugger.git"
     },
     "author": "IPWright83",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/IPWright83/react-useCompareDebugger/issues"
+        "url": "https://github.com/IPWright83/react-use-compare-debugger/issues"
     },
-    "homepage": "https://github.com/IPWright83/react-useCompareDebugger#readme",
+    "homepage": "https://github.com/IPWright83/react-use-compare-debugger#readme",
     "dependencies": {
         "react": "^17.0.1"
     },
