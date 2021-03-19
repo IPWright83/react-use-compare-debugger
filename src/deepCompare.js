@@ -40,7 +40,7 @@ const deepCompare = (previous, current, ignoreKeys = [], depth = 0) => {
             console.group(`${key} ${_isMatch}`);
 
             // Grab the set of mutations from the deepCompare
-            const objMutations = deepCompare(previousValue, currentValue, depth++);
+            const objMutations = deepCompare(previousValue, currentValue, ignoreKeys, depth++);
             if (objMutations.length === 0 && _isMatch === false) {
                 mutations.push({ key, type: "Object", isNonReferentiallyEqual: true });
             } else {
