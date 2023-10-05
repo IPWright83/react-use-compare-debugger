@@ -9,15 +9,29 @@ import styles from "./styles";
  */
 const logMutation = (m) => {
     switch (m.type) {
-        case "Primitive":
-            console.log(`%c${m.key}`, styles.mutations.key);
+        case "Array":
+            // This is bad, the same content but a different reference
+            if (m.isNonReferentiallyEqual) {
+                console.log(
+                    `%c${m.key} - %cWARNING This is a new array reference that looks identical to the previous. You may want to wrap this object within a useMemo hook.`,
+                    styles.mutations.key,
+                    styles.mutations.error
+                );
+            } else {
+                // As some fields were skipped, we can't be certain if this was a safe mutation or not
+                console.log(
+                    `%c${m.key} - %cWARNING This array may be the same as the previous, however some fields were ignored in the comparison`,
+                    styles.mutations.key,
+                    styles.mutations.warning
+                );
+            }
             break;
 
         case "Object":
             // This is bad, the same content but a different reference
             if (m.isNonReferentiallyEqual) {
                 console.log(
-                    `%c${m.key} - %cWARNING This is a new object reference that looks identical to the previous`,
+                    `%c${m.key} - %cWARNING This is a new object reference that looks identical to the previous. You may want to wrap this object within a useMemo hook.`,
                     styles.mutations.key,
                     styles.mutations.error
                 );
@@ -30,11 +44,12 @@ const logMutation = (m) => {
                 );
             }
             break;
+
         case "Function":
             // This is bad, the same function string but a different reference
             if (m.isNonReferentiallyEqual) {
                 console.log(
-                    `%c${m.key} - %cWARNING This is a new function that looks identical to the previous`,
+                    `%c${m.key} - %cWARNING This is a new function that looks identical to the previous. You may want to wrap this function within a useCallback hook.`,
                     styles.mutations.key,
                     styles.mutations.error
                 );
@@ -42,6 +57,11 @@ const logMutation = (m) => {
                 console.log(`%c${m.key}`, styles.mutations.key);
                 break;
             }
+            break;
+
+         case "Primitive":
+         default:
+            console.log(`%c${m.key}`, styles.mutations.key);
             break;
     }
 };
