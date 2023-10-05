@@ -27,15 +27,19 @@ const getFormat = value => {
  */
 const logValue = (key, previous, current) => {
     const areReferentiallyEqual = previous === current;
+    const nextStyle = areReferentiallyEqual ? styles.prevStyle : styles.nextStyle;
     const matchStyle = areReferentiallyEqual ? styles.matchStyle : styles.unmatchStyle;
+    const identicalText = areReferentiallyEqual ? "values are indentical" : "value has changed";
 
     console.log(
-        `%c${key}: %c${getFormat(previous)} %c=== %c${getFormat(current)} %c${areReferentiallyEqual}`,
+        `%c${key}: %c${getFormat(previous)} %c=== %c${getFormat(current)} %c(%c${areReferentiallyEqual}%c ${identicalText})`,
         styles.keyStyle,
         styles.prevStyle,
         styles.arrowStyle,
-        styles.nextStyle,
-        matchStyle
+        nextStyle,
+        styles.arrowStyle,
+        matchStyle,
+        styles.arrowStyle,
     );
 };
 
