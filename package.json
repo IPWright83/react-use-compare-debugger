@@ -1,6 +1,6 @@
 {
     "name": "react-use-compare-debugger",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Allows comparing two state/prop trees for differences",
     "main": "index.js",
     "scripts": {
@@ -16,7 +16,7 @@
         "url": "https://github.com/IPWright83/react-use-compare-debugger/issues"
     },
     "homepage": "https://github.com/IPWright83/react-use-compare-debugger#readme",
-    "dependencies": {
+    "peerDependencies": {
         "react": "^17.0.1"
     },
     "keywords": [
