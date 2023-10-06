@@ -49,6 +49,8 @@ const myHelloWorldComponent = () => {
 
 There is a hard limit of 100 items deep with an array/object hierarchy to prevent accidental infinite recursion of self-referrential objects.
 
+TODO: Add tests
+
 ## Thanks
 
 Thanks to LogRocket - this was inspired by their blog post https://blog.logrocket.com/how-to-get-previous-props-state-with-react-hooks/ and a need for some debugging.
